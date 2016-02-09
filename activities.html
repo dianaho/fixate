@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-  <html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-  <title>Activities</title>  
 
-  <link rel="stylesheet" href="assets/css/main.css" />
-	<!--<link href="assets/css/bootstrap.min.css" rel="stylesheet">-->
-</head>
+
+<html>
+  <head>
+    <title>Activities</title> 
+    <meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+     
+    <link rel="stylesheet" href="assets/css/main.css" />
+  	<!--<link href="assets/css/bootstrap.min.css" rel="stylesheet">-->
+  </head>
 
 <body>
 <div id="wrapper">
@@ -63,16 +65,35 @@
                   <li><a href="#" class="button big fit">Log In</a></li>
                 </ul>
               </section>
-
           </section>
 
-          <h3>ACTIVITIES</h3>
+          <!-- ACTUAL PAGE STARTS HERE -->
+          <section id="sidebar">
+            <section id="intro">
+              <header>
+                <h2>ACTIVITIES</h2>
+                <p>What do you like to do?</p>
+              </header>
 
-           <section>
-                <ul class="actions vertical">
-                  <li><a href="#" class="button big fit">ROLL THE DIE</a></li>
-                </ul>
-            </section>
+              <br>
+                <form method="get" action="activities.html">
+
+                <textarea type="text" name="activities" 
+                  value="Add your own activities here"
+                  onfocus="if(this.value=='Add your own activities here') this.value='';"
+                  maxlength="50"></textarea>
+                <span id="chars">50</span> characters remaining.<br><br>
+                <input type="submit" value="Submit"><br>
+
+                </form>
+
+              <section>
+                 <ul class="actions vertical">
+                        <li><a href="#" class="button big fit">ROLL THE DIE</a></li>
+                      </ul>
+                  </section>
+              </section>
+          </section>
 </div>
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="assets/js/bootstrap.min.js"></script>
