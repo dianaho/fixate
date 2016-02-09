@@ -36,6 +36,7 @@
 
 	blockquote:before, blockquote:after, q:before, q:after {
 		content: '';
+
 		content: none;
 	}
 
@@ -3444,7 +3445,16 @@
     margin-left: auto;
 }
 
+.container p{
+	text-align: center;
+}
+
 input[type=range] {
     display: block;
     width: 100%;
+    max-width: 500px;
+}
+
+.abc {
+	text-align: center;
 }
