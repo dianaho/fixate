@@ -1,19 +1,19 @@
+
 <!DOCTYPE html>
 
 <html>
   <head>
     <title>Home Page</title> 
-  	<meta charset="utf-8">
-  	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"> 
 
     <link rel="stylesheet" href="assets/css/main.css" />
-  	<!--<link href="assets/css/bootstrap.min.css" rel="stylesheet">-->
+    <!--<link href="assets/css/bootstrap.min.css" rel="stylesheet">-->
     <link type="text/css" rel="stylesheet" href="clock_assets/flipclock.css" />
   </head>
 
 <body>
   <div id="wrapper">
-
     <header id="header">
       <nav class="main">
         <ul>
@@ -79,12 +79,13 @@
         <!-- Title -->
         <header>
           <h2>TIME REMAINING</h2>
-          <p>How long is left of this study session</p>
+          <p>How much time you have left for this session</p>
         </header>
-        <div class="clock-builder-output"></div>
+          <section class="container">
+      <div class="clock-builder-output"></div>
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script type="text/javascript" src="clock_assets/flipclock.js"></script>
-        <style text="text/css">body .flip-clock-wrapper ul li a div div.inn, body .flip-clock-small-wrapper ul li a div div.inn { color: #CCCCCC; background-color: #333333; } body .flip-clock-dot, body .flip-clock-small-wrapper .flip-clock-dot { background: #323434; } body .flip-clock-wrapper .flip-clock-meridium a, body .flip-clock-small-wrapper .flip-clock-meridium a { color: #323434; }</style>
+        <style text="text/css">body .flip-clock-wrapper ul li a div div.inn, body .flip-clock-small-wrapper ul li a div div.inn { color: #CCCCCC; background-color: #333333;} body .flip-clock-dot, body .flip-clock-small-wrapper .flip-clock-dot { background: #323434; } body .flip-clock-wrapper .flip-clock-meridium a, body .flip-clock-small-wrapper .flip-clock-meridium a { color: #323434; }</style>
         <script type="text/javascript">
         $(function(){
           FlipClock.Lang.Custom = { days:'Days', hours:'Hours', minutes:'Minutes', seconds:'Seconds' };
@@ -98,19 +99,21 @@
   $('.clock-builder-output').FlipClock(countdown, opts);
 });
         </script>
+
       </section>
 
       <!-- Study options -->
+      </section>
     </div>
 
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/introHCI.js"></script>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/skel.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script src="assets/rangeslider.min.js"></script>
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/introHCI.js"></script>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/skel.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="clock_assets/flipclock.js"></script>
 
-  </body>
-  </html>
+</body>
+</html>
