@@ -9,6 +9,17 @@
      
     <link rel="stylesheet" href="assets/css/main.css" />
   	<!--<link href="assets/css/bootstrap.min.css" rel="stylesheet">-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+          $("form").submit(function(e){
+              alert("Activity submitted!");
+              e.preventDefault();
+          });
+      });
+    </script>
+
   </head>
 
 <body>
@@ -84,18 +95,20 @@
         <br>
 
         <!-- Textbox -->
-        <form method="get" action="activities.html">
+        <form method="get" target="_self">
           <textarea type="text" name="activities" 
             placeholder="Add your own activities here" 
             maxlength="50"></textarea>
           <span id="chars">50</span> characters remaining<br><br>
-          <input type="submit" value="Submit"><br>
+          <input type="submit" value="Submit" onClick="showInput()"><br>
+
+          <p><span id='display'></span></p>
         </form>
 
         <section>
            <ul class="actions vertical">
               <li>
-              <a href="#" class="button big fit">ROLL THE DIE</a>
+              <a href="#" class="button big fit">RANDOMIZE</a>
               </li>
             </ul>
         </section>
@@ -111,7 +124,7 @@
   <script src="assets/js/skel.min.js"></script>
   <script src="assets/js/util.js"></script>
   <script src="assets/js/main.js"></script>
-	<script src="assets/rangeslider.min.js"></script>
+	<!--<script src="assets/rangeslider.min.js"></script>
 	<script>
     // Initialize a new plugin instance for all
     // e.g. $('input[type="range"]') elements.
@@ -125,7 +138,7 @@
     // e.g. $('input[type="range"]') elements.
     // Usefull if you changed some attributes e.g. `min` or `max` etc.
     $('input[type="range"]').rangeslider('update', true);
-	</script>
+	</script> -->
 
 </body>
 </html>
