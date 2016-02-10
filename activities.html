@@ -12,88 +12,98 @@
   </head>
 
 <body>
-<div id="wrapper">
+  <div id="wrapper">
 
-          <header id="header">
-            <nav class="main">
-              <ul>
-                <li class="menu">
-                  <a class="fa-bars" href="#menu">Menu</a>
-                </li>
-              </ul>
-            </nav>
+    <header id="header">
+      <nav class="main">
+        <ul>
+          <li class="menu">
+          <a class="fa-bars" href="#menu">Menu</a>
+          </li>
+        </ul>
+      </nav>
 
-            <h1><a href="index.html">Fixate</a></h1>
-          </header>
+      <h1><a href="index.html">Fixate</a></h1>
+    </header>
 
-        <!-- Menu -->
-          <section id="menu">
+    <!-- Menu -->
+    <section id="menu">
 
-            <!-- Links -->
-              <section>
-                <ul class="links">
-                  <li>
-                    <a href="activities.html">
-                      <h3>Activities</h3>
-                      <!--<p>Feugiat tempus veroeros dolor</p>-->
-                    </a>
-                  </li>
-                  <li>
-                    <a href="graphs.html">
-                      <h3>Graphs</h3>
-                      <!--<p>Sed vitae justo condimentum</p>-->
-                    </a>
-                  </li>
-                  <li>
-                    <a href="settings.html">
-                      <h3>Settings</h3>
-                      <!--<p>Phasellus sed ultricies mi congue</p>-->
-                    </a>
-                  </li>
-                  <li>
-                    <a href="index.html">
-                      <h3>Logout</h3>
-                      <!--<p>Porta lectus amet ultricies</p>-->
-                    </a>
-                  </li>
-                </ul>
-              </section>
+      <!-- Links -->
+       <section>
+        <ul class="links">
+          <li>
+            <a href="activities.html">
+              <h3>Activities</h3>
+              <p>Add/View your activities</p>
+            </a>
+          </li>
 
-            <!-- Actions -->
-              <section>
-                <ul class="actions vertical">
-                  <li><a href="#" class="button big fit">Log In</a></li>
-                </ul>
-              </section>
-          </section>
+          <li>
+            <a href="graphs.html">
+              <h3>Graphs</h3>
+              <p>Check your progress</p>
+            </a>
+          </li>
 
-          <!-- ACTUAL PAGE STARTS HERE -->
-          <section id="sidebar">
-            <section id="intro">
-              <header>
-                <h2>ACTIVITIES</h2>
-                <p>What do you like to do?</p>
-              </header>
+          <li>
+            <a href="settings.html">
+              <h3>Settings</h3>
+              <p>Change your preferences</p>
+            </a>
+          </li>
 
-              <br>
-                <form method="get" action="activities.html">
+          <li>
+            <a href="index.html">
+              <h3>Logout</h3>
+            </a>
+          </li>
+        </ul>
+      </section>
 
-                <textarea type="text" name="activities" 
-                  placeholder="Add your own activities here" 
-                  maxlength="50"></textarea>
-                <span id="chars">50</span> characters remaining<br><br>
-                <input type="submit" value="Submit"><br>
+      <!-- Actions -->
+      <section>
+        <ul class="actions vertical">
+          <li>
+          <a href="#" class="button big fit">Log In</a>
+          </li>
+        </ul>
+      </section>
+    </section>
 
-                </form>
+    <!-- ACTUAL PAGE STARTS HERE -->
+    <section id="sidebar">
+      
+      <section id="intro">
 
-              <section>
-                 <ul class="actions vertical">
-                        <li><a href="#" class="button big fit">ROLL THE DIE</a></li>
-                      </ul>
-                  </section>
-              </section>
-          </section>
-</div>
+        <!-- Title -->
+        <header>
+          <h2>ACTIVITIES</h2>
+          <p>What do you like to do?</p>
+        </header>
+        <br>
+
+        <!-- Textbox -->
+        <form method="get" action="activities.html">
+          <textarea type="text" name="activities" 
+            placeholder="Add your own activities here" 
+            maxlength="50"></textarea>
+          <span id="chars">50</span> characters remaining<br><br>
+          <input type="submit" value="Submit"><br>
+        </form>
+
+        <section>
+           <ul class="actions vertical">
+              <li>
+              <a href="#" class="button big fit">ROLL THE DIE</a>
+              </li>
+            </ul>
+        </section>
+      </section>
+    </section>
+  </div>
+
+  <!-- All javascript files go here -->
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="assets/js/bootstrap.min.js"></script>
 	<script src="assets/js/introHCI.js"></script>
