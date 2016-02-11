@@ -3,8 +3,6 @@
 
 <html>
   <head>
-    <meta http-equiv="refresh" content="0; URL='activities.handlebars'" />
-
     <title>Activities</title> 
     <meta charset="utf-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
@@ -47,7 +45,6 @@
        <section>
         <ul class="links">
           <li>
-
             <a href="activities.html">
               <h3>Activities</h3>
               <p>Add/View your activities</p>
@@ -100,7 +97,7 @@
         <br>
 
         <!-- Textbox -->
-        <form method="get" target="_self">
+        <form role="form" method="get" action="/add">
           <textarea type="text" name="activities" 
             placeholder="Add your own activities here" 
             maxlength="50"></textarea>
@@ -117,6 +114,11 @@
               </li>
             </ul>
         </section>
+
+      {{#each activity}}
+        <p>{{description}}</p>
+      {{/each}}
+
       </section>
     </section>
   </div>

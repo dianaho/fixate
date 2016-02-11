@@ -15,7 +15,7 @@
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 	</head>
 	<body>
-
+	<div id="loginDiv">
 		<!-- Wrapper -->
 			<div id="wrapper">
 
@@ -517,12 +517,34 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 					</section>
 
 			</div>
+		</div>
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
+
+			<script type="text/javascript">
+
+			  (function(){
+			    var loginDiv = document.getElementById("loginDiv");
+			    var original = $("#loginDiv").clone();
+
+			    var show = function(){
+			      $('#loginDiv').html('<img src="images/splashscreen.gif" width="100%" height="100%">');
+			     // myDiv.style.display = "block";
+			      setTimeout(hide, 2000);  // 5 seconds
+			    }
+
+			    var hide = function(){
+			      $('#loginDiv').replaceWith(original);
+			    }
+
+			    show();
+			  })();
+
+			</script>
 
 	</body>
 </html>
