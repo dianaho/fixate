@@ -1793,6 +1793,8 @@
 		.button.big {
 			font-size: 0.7em;
 			padding: 0 3em;
+			max-width: 290px;
+			margin: 0 auto;
 		}
 
 		input[type="submit"].small,
