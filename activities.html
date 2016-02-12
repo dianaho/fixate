@@ -6,7 +6,8 @@
     <title>Activities</title> 
     <meta charset="utf-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-     
+    <meta http-equiv="refresh" content="0; url=activities" />
+
     <link rel="stylesheet" href="assets/css/main.css" />
   	<!--<link href="assets/css/bootstrap.min.css" rel="stylesheet">-->
 
@@ -98,8 +99,8 @@
         <br>
 
         <!-- Textbox -->
-        <form method="get" target="_self">
-          <textarea type="text" name="activities" 
+        <form target="_self" role="form" method="get" action="/add">
+          <textarea type="text" name="activities" id="description" 
             placeholder="Add your own activities here" 
             maxlength="50"></textarea>
           <span id="chars">50</span> characters remaining<br><br>
