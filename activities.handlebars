@@ -111,7 +111,8 @@
         <section>
            <ul class="actions vertical">
               <li>
-              <a href="#" class="button big fit">RANDOMIZE</a>
+              <button onclick="randomize()">RANDOMIZE</button> 
+              <div id="randomThis"></div>
               </li>
             </ul>
         </section>
@@ -134,6 +135,16 @@
   <script src="assets/js/skel.min.js"></script>
   <script src="assets/js/util.js"></script>
   <script src="assets/js/main.js"></script>
+
+  <script>
+  function randomize() {
+  $.getJSON('data.json', function(data) { 
+    var entry = data[Math.floor(Math.random()*data.length)];
+    console.log(entry);
+  document.getElementById("randomThis").innerHTML = entry;
+  }
+  </script>
+}
 	<!--<script src="assets/rangeslider.min.js"></script>
 	<script>
     // Initialize a new plugin instance for all
