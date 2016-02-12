@@ -8,10 +8,10 @@ var CountDown = (function ($) {
     var EndTime = ( new Date() ).getTime() + TimeOut;
 
     var GuiTimer = $('#countdown');
-    var GuiPause = $('#pause');
-    var GuiResume = $('#resume').hide();
+    var GuiPause = $('#pause').hide();
+    var GuiResume = $('#resume');
 
-    var Running = true;
+    var Running = false;
 
     var UpdateTimer = function() {
         // Run till timeout
@@ -63,8 +63,9 @@ var CountDown = (function ($) {
     };
 })(jQuery);
 
+//jQuery('#start').on('click',CountDown.Start(2400000));
 jQuery('#pause').on('click',CountDown.Pause);
 jQuery('#resume').on('click',CountDown.Resume);
 
 // ms
-CountDown.Start(5000000);
+CountDown.Start(1800000);
