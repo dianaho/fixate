@@ -445,8 +445,8 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 							
 								<br>
 									<form method="get" action="/routes">
-								      <p><input type="text" name="login" value="" placeholder="Username or Email"></p>
-								      <p><input type="password" name="password" value="" placeholder="Password"></p>
+								      <p><input type="text" id="inputUsername" name="login" value="" placeholder="Username"></p>
+								      <p><input type="password" id="inputPassword" name="password" value="" placeholder="Password"></p>
 								      
 								      <input type="checkbox" name="remember_me" id="remember_me">
 								      <label>Remember me on this computer</label>
@@ -545,6 +545,19 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			  })();
 
 			</script>
+	        <script type = "text/javascript">
+	        	//function validateLogin() {
+	        		$.getJSON("./accounts.html", function(json) {
+	        			//console.log(json[0].accounts);
+	        			for(var i in json[0].accounts) {
+	        				console.log("Username " + i + " " + json[0].accounts[i].username);
+	        				console.log("Password " + i + " " + json[0].accounts[i].password);
+	        			}
+	        		});
+	        		//var username = document.getElementById("inputUsername").value;
+	        		//var password = document.getElementById("inputPassword").value;
 
+	        	//}
+	        </script>
 	</body>
 </html>
