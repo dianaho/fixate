@@ -9,7 +9,9 @@ var CountDown = (function ($) {
 
     var GuiTimer = $('#countdown');
     var GuiPause = $('#pause').hide();
-    var GuiResume = $('#resume');
+    var GuiResume = $('#resume').hide();
+    var GuiStart = $('#begin');
+    var GuiEnd = $('#end').hide();
 
     var Running = false;
 
@@ -23,6 +25,8 @@ var CountDown = (function ($) {
             CurrentTime += TimeGap;
             if( CurrentTime >= EndTime ) {
                 GuiTimer.css('color','red');
+                GuiEnd.show();
+                GuiPause.hide();
             }
         }
         // Update Gui
@@ -41,15 +45,24 @@ var CountDown = (function ($) {
         Running = false;
         GuiPause.hide();
         GuiResume.show();
+        GuiStart.hide();
+        GuiEnd.hide();
     };
 
     var Resume = function() {
         Running = true;
         GuiPause.show();
         GuiResume.hide();
+        GuiStart.hide();
+        GuiEnd.hide();
     };
 
     var Start = function( Timeout ) {
+        GuiPause.hide();
+        GuiResume.hide();
+        GuiStart.show();
+        GuiEnd.hide();
+        //Running = true;
         TimeOut = Timeout;
         CurrentTime = ( new Date() ).getTime();
         EndTime = ( new Date() ).getTime() + TimeOut;
@@ -63,9 +76,9 @@ var CountDown = (function ($) {
     };
 })(jQuery);
 
-//jQuery('#start').on('click',CountDown.Start(2400000));
+jQuery('#begin').on('click',CountDown.Resume);
 jQuery('#pause').on('click',CountDown.Pause);
 jQuery('#resume').on('click',CountDown.Resume);
 
 // ms
-//CountDown.Start(1800000);
+CountDown.Start(10000);
