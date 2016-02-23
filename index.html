@@ -455,9 +455,9 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 								      <section>
            							<ul class="actions vertical">
-              					<li>
-              					<a href='homepage.html' class="button">Login</a>
-              					</li>
+              					
+              					<input type="button" value="Login" id="submit" onclick="validateLogin()"></a>
+              					
 
               					<li>
               					<a href='register.html' class="button">New User</a>
@@ -545,19 +545,26 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			  })();
 
 			</script>
-	        <script type = "text/javascript">
-	        	//function validateLogin() {
+	        <script>
+	        	function validateLogin() {
 	        		$.getJSON("./accounts.html", function(json) {
 	        			//console.log(json[0].accounts);
 	        			for(var i in json[0].accounts) {
-	        				console.log("Username " + i + " " + json[0].accounts[i].username);
-	        				console.log("Password " + i + " " + json[0].accounts[i].password);
+	        				/*console.log("Username " + i + " " + json[0].accounts[i].username);
+	        				console.log("Password " + i + " " + json[0].accounts[i].password);*/
+	        				if(username==json[0].accounts[i].username &&
+	        					password==json[0].accounts[i].password)
+	        					{
+	        						console.log("Success!");
+	        						break;
+	        					}
+	        				else
+	        					console.log("Meow Burrito")
 	        			}
 	        		});
-	        		//var username = document.getElementById("inputUsername").value;
-	        		//var password = document.getElementById("inputPassword").value;
-
-	        	//}
+	        		var username = document.getElementById("inputUsername").value;
+	        		var password = document.getElementById("inputPassword").value;
+	        	}
 	        </script>
 	</body>
 </html>
