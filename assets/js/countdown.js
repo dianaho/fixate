@@ -1,3 +1,7 @@
+var breaktimeB = 0;
+var worktimeB = 10000;
+var sessions = 5;
+
 var CountDown = (function ($) {
     // Length ms 
     var TimeOut = 10000;
@@ -69,10 +73,24 @@ var CountDown = (function ($) {
         UpdateTimer();
     };
 
+    var getTimes = function() {
+        $.getJSON("./accounts.html", function(json) {
+          //console.log(json[0].accounts);
+          sessions = json[0].accounts[0].sessions; 
+          var breaktimeA = json[0].accounts[0].breaktime; 
+          var worktimeA = json[0].accounts[1].worktime; 
+
+          breaktimeB = breaktimeA * 60000;
+          worktimeB = worktimeA * 60000; 
+          Start(worktimeB);
+          });
+    }
+
     return {
         Pause: Pause,
         Resume: Resume,
-        Start: Start
+        Start: Start,
+        getTimes: getTimes
     };
 })(jQuery);
 
@@ -80,5 +98,6 @@ jQuery('#begin').on('click',CountDown.Resume);
 jQuery('#pause').on('click',CountDown.Pause);
 jQuery('#resume').on('click',CountDown.Resume);
 
-// ms
-CountDown.Start(10000);
+CountDown.getTimes();
+//CountDown.Start(10000);
+

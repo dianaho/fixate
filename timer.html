@@ -113,6 +113,10 @@
           <p class="submit"><input type="submit" name="commit" value="Finish Session";> </p>
        </a> 
       </div>
+      <div id="sessions">
+        <h3>Sessions Remaining:  <input type="submit" name="commit" value="#" onclick="getSession()"></h3>
+
+      </div>  
 
     </div>
 
@@ -120,7 +124,6 @@
 </section>
 </section>
 </div>
-
 
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>
@@ -130,6 +133,16 @@
   <script src="assets/js/util.js"></script>
   <script src="assets/js/main.js"></script>
   <script src="assets/js/countdown.js"></script>
+
+   <script>
+      function getSession() {
+         $.getJSON("./accounts.html", function(json) {
+          //console.log(json[0].accounts);
+          var sessions = json[0].accounts[0].sessions; 
+          alert(sessions);
+          });
+        }
+  </script>
 
 </body>
 </html>
