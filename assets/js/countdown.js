@@ -68,4 +68,4 @@ jQuery('#pause').on('click',CountDown.Pause);
 jQuery('#resume').on('click',CountDown.Resume);
 
 // ms
-CountDown.Start(1800000);
+//CountDown.Start(1800000);
