@@ -23,13 +23,13 @@
 					<header id="header">
 						<nav class="main">
 							<ul>
-								<li class="menu">
+								<!--li class="menu">
 									<a class="fa-bars" href="#menu">Menu</a>
-								</li>
+								</li>-->
 							</ul>
 						</nav>
 
-						<h1><a href="#">Fixate</a></h1>
+						<!--<h1><a href="#">Fixate</a></h1>-->
 
 					<!--	<nav class="links">
 							<ul>
@@ -444,7 +444,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 								</header>
 							
 								<br>
-									<form method="get" action="javascript:validateLogin()">
+									<form name= "loginform" method="get" action="/routes">
 								      <p><input type="text" id="inputUsername" name="login" value="" placeholder="Username"></p>
 								      <p><input type="password" id="inputPassword" name="password" value="" placeholder="Password"></p>
 								      
@@ -455,9 +455,9 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 								      <section>
            							<ul class="actions vertical">
-              					<li>
-              					<a href='homepage.html' class="button">Login</a>
-              					</li>
+              					
+              					<input type="button" value="Login" id="submit" onclick="validateLogin()">
+              					
 
               					<li>
               					<a href='register.html' class="button">New User</a>
@@ -518,46 +518,62 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 			</div>
 		</div>
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
+<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/skel.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+	<script src="assets/js/main.js"></script>
 
-			<script type="text/javascript">
+	<!--<script type="text/javascript">
 
-			  (function(){
-			    var loginDiv = document.getElementById("loginDiv");
-			    var original = $("#loginDiv").clone();
+	  (function(){
+	    var loginDiv = document.getElementById("loginDiv");
+	    var original = $("#loginDiv").clone();
 
-			    var show = function(){
-			      $('#loginDiv').html('<img src="images/splashscreen.gif" width="100%" height="100%">');
-			     // myDiv.style.display = "block";
-			      setTimeout(hide, 2000);  // 5 seconds
-			    }
+	    var show = function(){
+	      $('#loginDiv').html('<img src="images/splashscreen.gif" width="100%" height="100%">');
+	     // myDiv.style.display = "block";
+	      setTimeout(hide, 2000);  // 5 seconds
+	    }
 
-			    var hide = function(){
-			      $('#loginDiv').replaceWith(original);
-			    }
+	    var hide = function(){
+	      $('#loginDiv').replaceWith(original);
+	    }
 
-			    show();
-			  })();
+	    show();
+	  })(); -->
 
-			</script>
-	        <script type = "text/javascript">
-	        	function validateLogin() {
-	        		$.getJSON("./accounts.html", function(json) {
-	        			//console.log(json[0].accounts);
-	        			for(var i in json[0].accounts) {
-	        				console.log("Username " + i + " " + json[0].accounts[i].username);
-	        				console.log("Password " + i + " " + json[0].accounts[i].password);
-	        			}
-	        		});
-	        		//var username = document.getElementById("inputUsername").value;
-	        		//var password = document.getElementById("inputPassword").value;
+	</script>
+    <script>
+    	function validateLogin() {
+    		$.getJSON("./accounts.html", function(json) {
+    			//console.log(json[0].accounts);
+    			for(var i in json[0].accounts) {
+    				/*console.log("Username " + i + " " + json[0].accounts[i].username);
+					console.log("Password " + i + " " + json[0].accounts[i].password);*/
+					if((username==json[0].accounts[i].username) &&
+						(password==json[0].accounts[i].password)) {
+						console.log("Success!");
+						window.location = "homepage.html";
+						valid = true;
+						setCookie(username, password);
+						return false;
+					}
+					else{
+						console.log("Meow Burrito");
+					}
+        			
+        		}
 
-	        	}
-	        </script>
+        		if(valid == false) {
+					alert("Login info was unMEOWlievably wrong!");
+				}
+    		});
+    		var valid = false;
+    		var username = document.getElementById("inputUsername").value;
+    		var password = document.getElementById("inputPassword").value;
+    	}
+    </script>
 	</body>
 </html>
