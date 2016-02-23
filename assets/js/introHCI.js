@@ -83,7 +83,7 @@ $('textarea').keyup(function() {
 });
 
 //For timer function
-function startTimer() {
+/*function startTimer() {
   userInput = document.getElementById('userTime').value;
     if(userInput.length == 0){
         alert("Please enter a value");
@@ -120,7 +120,7 @@ function startTimer() {
         }); 
       }  
     }
-}
+}*/
 
 //Writes the added activities to activity page
 function showInput(){

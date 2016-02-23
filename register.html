@@ -85,12 +85,13 @@
         </header>
 
 
-        <form id='register' action='thank-you.html'
-          accept-charset='UTF-8'>
+        <!--<form id='register' action='thank-you.html'
+          accept-charset='UTF-8'>-->
+        <form id='register' method='/get' action='/register'> <!-- action='thank-you.html'>-->
         <fieldset >
         <input type='hidden' name='submitted' id='submitted' value='1'/>
-        <label for='name' >Your Full Name: </label>
-        <input type='text' name='name' id='name' maxlength="50" />
+        <label for='fullname' >Your Full Name: </label>
+        <input type='text' name='fullname' id='name' maxlength="50" />
         <label for='email' >Email Address:</label>
         <input type='text' name='email' id='email' maxlength="50" />
          

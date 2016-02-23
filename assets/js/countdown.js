@@ -1,4 +1,5 @@
 var CountDown = (function ($) {
+
     // Length ms 
     var TimeOut = 10000;
     // Interval ms

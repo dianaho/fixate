@@ -2,7 +2,7 @@
  * Module dependencies.
  */
 
-var express = require('express');
+var express =require('express');
 var http = require('http');
 var mongoose = require('mongoose');
 var path = require('path');
@@ -11,6 +11,7 @@ var bodyParser = require('body-parser');
 
 var activities = require('./routes/activities');
 var add = require('./routes/add');
+var register = require('./routes/register');
 //var router = require('./routes/routes');
 //var homepage = require('./routes/homepage');
 // Example route
@@ -48,6 +49,7 @@ if ('development' == app.get('env')) {
 // Add routes here
 app.get('/activities', activities.view);
 app.get('/add', add.addActivity);
+app.get('/register', register.cool);
 //app.get('/routes');
 // Example route
 // app.get('/users', user.list);

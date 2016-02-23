@@ -444,7 +444,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 								</header>
 							
 								<br>
-									<form method="get" action="/routes">
+									<form method="get" action="javascript:validateLogin()">
 								      <p><input type="text" id="inputUsername" name="login" value="" placeholder="Username"></p>
 								      <p><input type="password" id="inputPassword" name="password" value="" placeholder="Password"></p>
 								      
@@ -546,7 +546,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 			</script>
 	        <script type = "text/javascript">
-	        	//function validateLogin() {
+	        	function validateLogin() {
 	        		$.getJSON("./accounts.html", function(json) {
 	        			//console.log(json[0].accounts);
 	        			for(var i in json[0].accounts) {
@@ -557,7 +557,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 	        		//var username = document.getElementById("inputUsername").value;
 	        		//var password = document.getElementById("inputPassword").value;
 
-	        	//}
+	        	}
 	        </script>
 	</body>
 </html>

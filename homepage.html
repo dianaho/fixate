@@ -95,7 +95,7 @@
       <div align="center">
         <br>
 
-        <input type="range" min="10" max="50" step="5" value="30">
+        <input type="range" id="workSet" min="10" max="50" step="5" value="30">
         <p class="abc">
          	Work Time:
          	<output class="output abc"></output>
@@ -105,7 +105,7 @@
       <br>
 
       <div align="center">
-        <input type="range" min="0" max="10" step="1" value="5">
+        <input type="range" id="breakSet" min="0" max="10" step="1" value="5">
         <p class="abc">
          	Break Time: 
          	<output class="output abc"></output>
@@ -115,15 +115,14 @@
       <br>
 
       <div align="center">
-        <input type="range" min="1" max="10" step="1" value="3">
+        <input type="range" id="sessionSet" min="1" max="10" step="1" value="3">
         <p class="abc">
          	Number of Blocks: 
           <output class="output abc"></output>
         </p>
       </div>
       <a href="timer.html">
-        <p class="submit"><input type="submit" name="commit" value="Start"
-          onclick="startTimer()"></p>
+        <p class="submit"><input type="submit" name="commit" value="Start"></p>
         </a>
       </section>
     </div>
@@ -136,6 +135,7 @@
   <script src="assets/js/util.js"></script>
   <script src="assets/js/main.js"></script>
   <script src="assets/rangeslider.min.js"></script>
+  <script src="assets/js/countdown.js"></script>
   <script>
     // Initialize a new plugin instance for all
     // e.g. $('input[type="range"]') elements.
