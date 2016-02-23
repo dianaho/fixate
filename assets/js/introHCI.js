@@ -127,3 +127,53 @@ function showInput(){
   var new_activity = document.getElementById("activities").value;
   document.getElementById('display').innerHTML = new_activity;
 }
+
+function validateLogin() {
+  $.getJSON("./accounts.html", function(json) {
+    //console.log(json[0].accounts);
+      for(var i in json[0].accounts) {
+        /*console.log("Username " + i + " " + json[0].accounts[i].username);
+      console.log("Password " + i + " " + json[0].accounts[i].password);*/
+      if((username==json[0].accounts[i].username) &&
+        (password==json[0].accounts[i].password)) {
+        console.log("Success!");
+        window.location = "homepage.html";
+        valid = true;
+        return false;
+      }
+      else{
+        console.log("Meow Burrito");
+      }
+          
+        }
+
+        if(valid == false) {
+      alert("Login info was unMEOWlievably wrong!");
+    }
+  });
+  var valid = false;
+  var username = document.getElementById("inputUsername").value;
+  var password = document.getElementById("inputPassword").value;
+}
+
+function setCookie(cname, cpassword) {
+  document.cookie = "username=" + cname "; password= " + cpassword;
+}
+
+function getCookie(cname) {
+  var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1);
+        if (c.indexOf(name) == 0)
+          return c.substring(name.length, c.length);
+    }
+    return "";
+}
+
+function checkCookie() {
+  var user = getCookie("username");
+    if (user != "") {
+        alert("Welcome again " + user);
+    } 
+}
