@@ -1,4 +1,4 @@
-var mongoose = require('mongoose');
+/*var mongoose = require('mongoose');
 var Account = require('../models/account');
 
 exports.cool = function(req, res) {
@@ -34,7 +34,7 @@ exports.cool = function(req, res) {
 						success: true,
 						account
 					});
-				});
+				});*/
 
 
 
@@ -69,4 +69,4 @@ exports.cool = function(req, res) {
 				});	
 			}
 		});*/
-}
+//}

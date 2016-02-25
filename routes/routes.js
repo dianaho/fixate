@@ -15,7 +15,7 @@ module.exports = function(app) {
 		getAccounts(res);
 	});
 
-	app.post('/accounts.html', function(req, res) {
+	/*app.post('/accounts.html', function(req, res) {
 		console.log("inside post method!!!!");
 		Account.findOne({Username:req.body.username},function(err,user){
 			if (!accounts) {
@@ -45,5 +45,5 @@ module.exports = function(app) {
 		});
 
 
-	});
+	});*/
 }
