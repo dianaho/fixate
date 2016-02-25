@@ -3,7 +3,6 @@ var worktimeB = 10000;
 var sessions = 5;
 
 var CountDown = (function ($) {
-
     // Length ms 
     var TimeOut = 10000;
     // Interval ms
@@ -83,7 +82,7 @@ var CountDown = (function ($) {
 
           breaktimeB = breaktimeA * 60000;
           worktimeB = worktimeA * 60000; 
-          //Start(worktimeB);
+          //Start(breaktimeB);
           });
     }
 
@@ -100,4 +99,4 @@ jQuery('#pause').on('click',CountDown.Pause);
 jQuery('#resume').on('click',CountDown.Resume);
 
 CountDown.getTimes();
-CountDown.Start(10000);
+CountDown.Start(5000);

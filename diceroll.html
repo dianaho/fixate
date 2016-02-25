@@ -90,14 +90,14 @@
       </header>
      
      
-      <div id="roll">        
+      <div>        
         <a href="#">
-          <p class="submit"><input type="submit" name="commit" value="Roll the Die";> </p>
+          <p class="submit"><input type="submit" name="commit" value="Roll the Die" onclick="rollDie()"> </p>
        </a> 
       </div>
       <div id="skip">        
-        <a href="#">
-          <p class="submit"><input type="submit" name="commit" value="Nah, I'll pass.";> </p>
+        <a href="break.html">
+          <p class="submit"><input type="submit" name="commit" value="Nah, I'll pass."> </p>
        </a> 
       </div>
 
@@ -108,7 +108,6 @@
 </section>
 </div>
 
-
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>
   <script src="assets/js/introHCI.js"></script>
@@ -117,6 +116,18 @@
   <script src="assets/js/util.js"></script>
   <script src="assets/js/main.js"></script>
 <!--  <script src="assets/js/countdown.js"></script>-->
+
+  <script>
+      function rollDie() {
+        $.getJSON("./accounts.html", function(json) {
+          //console.log(json[0].accounts);
+          console.log("Success!");
+          var activity = json[0].accounts[0].activities; 
+          var randomActivity = Math.floor(Math.random()*activity.length);
+          alert("The activity you rolled is: " + activity[randomActivity]);    
+          });
+        }
+  </script>
 
 </body>
 </html>
