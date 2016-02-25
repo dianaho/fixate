@@ -21,6 +21,7 @@
           </li>
         </ul>
       </nav>
+      <h1 id = "welcome">Welcome, user.</h1>
 
       <h1><a href="timer.html">Fixate</a></h1>
     </header>
@@ -134,5 +135,9 @@
   <script src="assets/js/skel.min.js"></script>
   <script src="assets/js/util.js"></script>
   <script src="assets/js/main.js"></script>
+  <script>
+    var welcomeName = getCookie("username");
+    console.log(welcomeName);
+    $("#welcome").text("Welcome, " + welcomeName);</script>
 </body>
 </html>

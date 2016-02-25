@@ -157,10 +157,12 @@ function validateLogin() {
 }
 
 function setCookie(cname, cpassword) {
-  document.cookie = "username=" + cname "; password= " + cpassword;
+  document.cookie = "username=" + cname + "; password= " + cpassword;
+  console.log("IT FUCKIN WORKED" + cname);
 }
 
 function getCookie(cname) {
+  var name = cname+"=";
   var ca = document.cookie.split(';');
     for(var i=0; i<ca.length; i++) {
         var c = ca[i];
