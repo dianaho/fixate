@@ -89,7 +89,10 @@
         </br>
       </header>
      
-     
+     <div id="activity">
+        <h2> </h2>
+     </div>
+     </br>
       <div>        
         <a href="#">
           <p class="submit"><input type="submit" name="commit" value="Roll the Die" onclick="rollDie()"> </p>
@@ -119,13 +122,16 @@
 
   <script>
       function rollDie() {
-        $.getJSON("./accounts.html", function(json) {
-          //console.log(json[0].accounts);
-          console.log("Success!");
-          var activity = json[0].accounts[0].activities; 
-          var randomActivity = Math.floor(Math.random()*activity.length);
-          alert("The activity you rolled is: " + activity[randomActivity]);    
-          });
+       // $.getJSON("./accounts.html", function(json) {
+          var activity = getCookie("activities");
+          //$("#welcome").text("Welcome, " + welcomeName);
+          console.log("Success!" + activity);
+          //var activity = json[0].accounts[0].activities; 
+          var activityList = activity.split(',');
+          var randomActivity = Math.floor(Math.random()*activityList.length);
+         // console.log(randomActivity);
+         $('#activity h2').text(activityList[randomActivity]); 
+          //});
         }
   </script>
 

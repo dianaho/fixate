@@ -68,9 +68,9 @@ $(function() {
     });
     // end
   
-    $inputRange.rangeslider({
+   /* $inputRange.rangeslider({
       polyfill: false 
-    });
+    });*/
 });
 
 //For activities page
@@ -159,7 +159,7 @@ function validateLogin() {
 function setCookie(cname, cpassword, cfullname, cemail, cwork, cbreak, csession, cactivities) {
   document.cookie = "username=" + cname + "/// password=" + cpassword + "/// fullname=" + cfullname + "/// email=" +
   cemail + "/// worktime=" + cwork + "/// breaktime=" + cbreak + "/// sessions=" + csession + "/// activities=" + 
-  cactivities;
+  cactivities + "///";
   console.log(document.cookie);
   //console.log("IT FUCKIN WORKED" + cname + cpassword + cfullname + cemail + cwork + cbreak + csession + cactivities);
 }
