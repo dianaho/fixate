@@ -21,7 +21,7 @@
           </li>
         </ul>
       </nav>
-      <h1 id = "welcome">Welcome, user.</h1>
+      <!--<h1 id = "welcome">Welcome, user.</h1>-->
 
       <h1><a href="timer.html">Fixate</a></h1>
     </header>
@@ -83,6 +83,7 @@
 
       <section id="intro">
 
+        <h3 id="welcome"> Welcome, User</h3>
         <!-- Title -->
         <header>
           <h2>STUDY PERIODS</h2>
@@ -136,7 +137,7 @@
   <script src="assets/js/util.js"></script>
   <script src="assets/js/main.js"></script>
   <script>
-    var welcomeName = getCookie("username");
+    var welcomeName = getCookie("fullname");
     console.log(welcomeName);
     $("#welcome").text("Welcome, " + welcomeName);</script>
 </body>

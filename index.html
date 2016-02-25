@@ -558,7 +558,13 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 						console.log("Success!");
 						window.location = "homepage.html";
 						valid = true;
-						setCookie(username, password);
+						var fullName = json[0].accounts[i].name;
+						var email = json[0].accounts[i].email;
+						var workTime = json[0].accounts[i].worktime;
+						var breakTime = json[0].accounts[i].breaktime;
+						var sessions = json[0].accounts[i].sessions;
+						var activitiesList = json[0].accounts[i].activities;
+						setCookie(username, password, fullName, email, workTime, breakTime, sessions, activitiesList);
 						return false;
 					}
 					else{

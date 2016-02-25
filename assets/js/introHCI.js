@@ -156,19 +156,24 @@ function validateLogin() {
   var password = document.getElementById("inputPassword").value;
 }
 
-function setCookie(cname, cpassword) {
-  document.cookie = "username=" + cname + "; password= " + cpassword;
-  console.log("IT FUCKIN WORKED" + cname);
+function setCookie(cname, cpassword, cfullname, cemail, cwork, cbreak, csession, cactivities) {
+  document.cookie = "username=" + cname + "/// password=" + cpassword + "/// fullname=" + cfullname + "/// email=" +
+  cemail + "/// worktime=" + cwork + "/// breaktime=" + cbreak + "/// sessions=" + csession + "/// activities=" + 
+  cactivities;
+  console.log(document.cookie);
+  //console.log("IT FUCKIN WORKED" + cname + cpassword + cfullname + cemail + cwork + cbreak + csession + cactivities);
 }
 
 function getCookie(cname) {
   var name = cname+"=";
-  var ca = document.cookie.split(';');
+  var ca = document.cookie.split('///');
     for(var i=0; i<ca.length; i++) {
         var c = ca[i];
-        while (c.charAt(0)==' ') c = c.substring(1);
-        if (c.indexOf(name) == 0)
+        while (c.charAt(0)==' ') {
+          c = c.substring(1);
+          if (c.indexOf(name) == 0)
           return c.substring(name.length, c.length);
+      }
     }
     return "";
 }
