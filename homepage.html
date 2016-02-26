@@ -60,6 +60,13 @@
           </li>
 
           <li>
+            <a href="help.html">
+              <h3>Help</h3>
+              <p>Learn how to use this app</p>
+            </a>
+          </li>
+
+          <li>
             <a href="index.html">
               <h3>Logout</h3>
               <p>Goodbye</p>
@@ -88,6 +95,8 @@
         <header>
           <h2>STUDY PERIODS</h2>
           <p>How long do you want to study for?</p>
+
+          <h4><a href="help.html">Click here if you need help!</a></h4>
         </header>
       </section>
 
@@ -97,6 +106,7 @@
       <div align="center">
         <br>
 
+        <p style="font-size:90%;"> How many minutes do you want to study for per session? </p>
         <input type="range" id="workSet" min="10" max="50" step="5" value="30">
         <p class="abc">
          	Work Time:
@@ -106,6 +116,7 @@
 
       <br>
 
+      <p style="font-size:90%;"> How many minutes do you want each break session to last between study sessions? </p>
       <div align="center">
         <input type="range" id="breakSet" min="0" max="10" step="1" value="5">
         <p class="abc">
@@ -116,6 +127,7 @@
 
       <br>
 
+      <p style="font-size:90%;"> How many sets of study and break sessions do you want? </p>
       <div align="center">
         <input type="range" id="sessionSet" min="1" max="10" step="1" value="5">
         <p class="abc">
@@ -128,6 +140,8 @@
         </a>
       </section>
     </div>
+  </section>
+
 
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>
